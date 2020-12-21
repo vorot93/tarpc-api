@@ -26,5 +26,5 @@ pub trait EthApi {
 
     async fn block(hash: H256) -> Result<Option<Block>, String>;
     async fn header(hash: H256) -> Result<Option<Header>, String>;
-    async fn body(hash: H256) -> Result<Option<Block>, String>;
+    async fn body(hash: H256) -> Result<Option<BlockBody>, String>;
 }
