@@ -1,7 +1,7 @@
 #![allow(clippy::large_enum_variant)]
 
 use ethereum::{Header, Transaction};
-use primitive_types::H256;
+use primitive_types::{H256, U256};
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeSet;
 
@@ -26,4 +26,5 @@ pub trait EthApi {
 
     async fn header(hash: H256) -> Result<Option<Header>, String>;
     async fn body(hash: H256) -> Result<Option<BlockBody>, String>;
+    async fn total_difficulty(hash: H256) -> Result<Option<U256>, String>;
 }
