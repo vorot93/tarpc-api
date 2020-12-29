@@ -7,6 +7,6 @@ license = "Apache-2.0"
 
 [dependencies]
 ethereum = { git = "https://github.com/rust-blockchain/ethereum", branch = "vorot93/dev", default-features = false, features = ["with-serde"] }
-primitive-types = { git = "https://github.com/paritytech/parity-common", default-features = false, features = ["serde"] }
+ethereum-types = { git = "https://github.com/paritytech/parity-common" }
 serde = { version = "1", features = ["derive"] }
 tarpc = "0.24"
